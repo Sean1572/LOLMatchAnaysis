@@ -41,11 +41,11 @@ Now for null values, I have mostly decided to leave null values as is. Keep in m
 
 Okay lets do some EDA on our dataset.
 
-- INSERT PLOT HERE MAKE A CHOICE 
+<iframe src="assets/csat15.html" width=800 height=600 frameBorder=0></iframe> 
 
 ## Bivaritae Analysis
 
-- INSERT PLOT HERE
+<iframe src="assets/firstbaron.html" width=800 height=600 frameBorder=0></iframe> 
 
 ## Interesting Aggregates
 
@@ -57,6 +57,11 @@ I am inclined to think there is not a NMAR column in our dataset primarly becaus
 
 ## Missingness Dependency
 
+<iframe src="assets/missingness1.html" width=800 height=600 frameBorder=0></iframe> 
+
+#### TODO GET THE OTHER GRAPH IN
+
+
 # Hypothesiss Testing
 
-
+<iframe src="assets/hypotest.html" width=800 height=600 frameBorder=0></iframe> 
