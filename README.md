@@ -39,17 +39,74 @@ Now for null values, I have mostly decided to leave null values as is. Keep in m
 
 ## Univariate Analysis
 
-Okay lets do some EDA on our dataset.
+Okay lets do some EDA on our dataset. Here we plot the number of minions/monsters (cs) killed total by the team 10 minutes into the game. Here the plot is normally distributed with most csat10 done between 250 to 350 CS total (so about 50 to 70 cs for each player in a team of 5).  
 
 <iframe src="assets/csat15.html" width=800 height=600 frameBorder=0></iframe> 
 
 ## Bivaritae Analysis
 
+Upon looking at a few scatter plots, this particlar scatter plot stands out. Here we have a point for each team. Each point has thier adverage win_rate in the dataset and the adverage time they take frist baron. Here there appears to be a positive relationship between a team's winrate and how often the team takes the frist baron in thier games! We will explore this relationship further in the hypothesis test. 
+
 <iframe src="assets/firstbaron.html" width=800 height=600 frameBorder=0></iframe> 
 
 ## Interesting Aggregates
 
+Below we 
+
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>firstblood</th>
+      <th>firstdragon</th>
+      <th>firstherald</th>
+      <th>firstbaron</th>
+      <th>firsttower</th>
+      <th>firstmidtower</th>
+      <th>firsttothreetowers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>False</th>
+      <td>0.139547</td>
+      <td>0.181296</td>
+      <td>0.179516</td>
+      <td>0.095702</td>
+      <td>0.148764</td>
+      <td>0.135297</td>
+      <td>0.119878</td>
+    </tr>
+    <tr>
+      <th>True</th>
+      <td>0.120814</td>
+      <td>0.126904</td>
+      <td>0.127879</td>
+      <td>0.165684</td>
+      <td>0.145047</td>
+      <td>0.152576</td>
+      <td>0.161096</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 # Assessment of Missingness
+
 
 ## NMAR Missingness
 
@@ -57,12 +114,30 @@ I am inclined to think there is not a NMAR column in our dataset primarly becaus
 
 ## Missingness Dependency
 
+So we mostly believe that league and other likewise data may explain the missingness of much of our dataset. Lets test out that a bit. 
+
+Our csat10 column contains a handful of missing values, so does that information depend on the league the match took place in? To test that we run a permutation using the TVD between leagues for the proporition of the data that is missing and not missing. Since we have decided the data doesn't contain NMAR columns (and the missinginess is not by design since we cannot 100% predict the missinginess), this test will help decide MAR vs MCAR.
 <iframe src="assets/missingness1.html" width=800 height=600 frameBorder=0></iframe> 
+
+From the test we get an obsreved tvd of 0.99. As shown above, much our simulated TVDs are far below this statistics, and we obtain a p-value of 0. At a 5% threshold, we reject the null hypothesis that the data is MCAR.
+
+How about for another column in our dataset visionscore. To test to see if the missingness of visionscore depends on league, we again run a permutation test with TVDs for the proportion of leagues with missing (and nonmissing) visionscores at 5% threshold.
+
 <iframe src="assets/missingness2.html" width=800 height=600 frameBorder=0></iframe> 
 
-#### TODO GET THE OTHER GRAPH IN
+Here we see our obsreved tvd is actually within the emerical distrbution of the simluated TVDs!. Our p-value follows suit at 0.729 and thus we failed to reject the null hypothesis that the column is MCAR. 
 
 
 # Hypothesiss Testing
 
+Based on our prious EDA, it seems like taking baron frist tended to correlate with teams who won more. Lets see how that matches up. 
+
+Null hypothesis: The distrubtions of Winning and Losing teams taking baron where taken from the same ditrubtion.
+
+Alternative Hypothesisi: The distrubtions of winning and losing teams takin baron are diffrent distrbutions. 
+
+We will run a permutation test on these categorical variables so we will use TVD as our test stat. 
+
 <iframe src="assets/hypotest.html" width=800 height=600 frameBorder=0></iframe> 
+
+Clear as day, we get a very large obsreved stat of 0.57, far outside the current distrubtion and likewise we obtain a p-value of 0.0. At a 5% threshold we reject the null hypothesis! Thus it may appear that winning and losing teams take frist baron in diffrent distrbutions but we cannot say for 100% certainity since these tests never prove anything. 
