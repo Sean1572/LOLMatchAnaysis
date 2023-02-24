@@ -4,7 +4,7 @@
 
 League of Legends is a free-to-play mutliplayer game where teams of 5 players each battle each other in the place called summoners rift. Summoners rift is where I have spent too much time as a kid. Playing the game, its natural to try to find the best way to win as the game is increditbly techical, requires great degrees of teamwork, and roughly an hour free to play a single match. It can be a long game to play and one would want to make sure thier time is worth it. So this is raises the big question we will attempt to explore today
 
-### What game objectives in league of legends are more likely to be taken by winning teams?
+### What game objectives in league of legends are more likely to be taken by winning teams in pro-play matches in 2022?
 
 To work towards answering this question, we will use a dataset provided by https://oracleselixir.com/. This dataset contains the match history of as many pro leages as possible during the 2022 pro-play season. The raw dataset contains roughly 149232 rows and 123 columns. Luckily for us and my laptop's 12 gb of RAM, we will only care for a few columns as shown below:
 
@@ -28,6 +28,7 @@ To work towards answering this question, we will use a dataset provided by https
 | csat10 | Int | How much CS (critter score, number of monsters killed) a team got by 10 minutes into a match. The original dataset had a few of these kinds of statistics |
 | csat15 | Int | How much CS (critter score, number of monsters killed) a team got by 15 minutes into a match. The original dataset had a few of these kinds of statistics |
 | kills | Int | how many times the team killed a member of the opposing team |
+| visionscore | int | A rating of a team's ability to score vision. Prehaps winning teams can score more vision than other teams |
 
 # Data Cleaning and EDA
 
