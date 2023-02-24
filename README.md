@@ -60,57 +60,7 @@ lol_team_data.loc[:,col].groupby("result").mean()
 
 What this code does is take all the "frist" columns for each teams then groups the result to find, on adverage, how often they occur alongside a winning team or a losing team. Below we can obsreve that consistently on average, winning teams usually are the ones to obtain some objective before the other team. Note that the highest adverage for a winning team to take some objective is for fristbaron. It would seem to point more to a relationship between winning and taking fristbaron. 
 
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>firstblood</th>
-      <th>firstdragon</th>
-      <th>firstherald</th>
-      <th>firstbaron</th>
-      <th>firsttower</th>
-      <th>firstmidtower</th>
-      <th>firsttothreetowers</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>False</th>
-      <td>0.139547</td>
-      <td>0.181296</td>
-      <td>0.179516</td>
-      <td>0.095702</td>
-      <td>0.148764</td>
-      <td>0.135297</td>
-      <td>0.119878</td>
-    </tr>
-    <tr>
-      <th>True</th>
-      <td>0.120814</td>
-      <td>0.126904</td>
-      <td>0.127879</td>
-      <td>0.165684</td>
-      <td>0.145047</td>
-      <td>0.152576</td>
-      <td>0.161096</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+| result   |   firstblood |   firstdragon |   firstherald |   firstbaron |   firsttower |   firstmidtower |   firsttothreetowers |\n|:---------|-------------:|--------------:|--------------:|-------------:|-------------:|----------------:|---------------------:|\n| False    |     0.390738 |      0.507638 |      0.502653 |     0.267969 |     0.416546 |        0.378839 |             0.335665 |\n| True     |     0.607849 |      0.638491 |      0.643397 |     0.833601 |     0.729773 |        0.767653 |             0.81052  |
 
 # Assessment of Missingness
 
