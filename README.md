@@ -79,7 +79,9 @@ lol_team_data.loc[:,col].groupby("result").mean()
 
 What this code does is take all the "frist" columns for each teams then groups the result to find, on adverage, how often they occur alongside a winning team or a losing team. Below we can obsreve that consistently on average, winning teams usually are the ones to obtain some objective before the other team. Note that the highest adverage for a winning team to take some objective is for fristbaron. It would seem to point more to a relationship between winning and taking fristbaron. 
 
-| result   |   firstblood |   firstdragon |   firstherald |   firstbaron |   firsttower |   firstmidtower |   firsttothreetowers |\n|:---------|-------------:|--------------:|--------------:|-------------:|-------------:|----------------:|---------------------:|\n| False    |     0.390738 |      0.507638 |      0.502653 |     0.267969 |     0.416546 |        0.378839 |             0.335665 |\n| True     |     0.607849 |      0.638491 |      0.643397 |     0.833601 |     0.729773 |        0.767653 |             0.81052  |
+
+' result   |   firstblood |   firstdragon |   firstherald |   firstbaron |   firsttower |   firstmidtower |   firsttothreetowers |\n|:---------|-------------:|--------------:|--------------:|-------------:|-------------:|----------------:|---------------------:|\n| False    |     0.390738 |      0.507638 |      0.502653 |     0.267969 |     0.416546 |        0.378839 |             0.335665 |\n| True     |     0.607849 |      0.638491 |      0.643397 |     0.833601 |     0.729773 |        0.767653 |             0.81052  |'
+
 
 # Assessment of Missingness
 
