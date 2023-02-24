@@ -1,4 +1,4 @@
-# League of Legend Victory Anaysis
+# League of Legend Victory Analysis
 
 ## Introduction
 
