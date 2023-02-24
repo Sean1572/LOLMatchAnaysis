@@ -58,6 +58,7 @@ I am inclined to think there is not a NMAR column in our dataset primarly becaus
 ## Missingness Dependency
 
 <iframe src="assets/missingness1.html" width=800 height=600 frameBorder=0></iframe> 
+<iframe src="assets/missingness2.html" width=800 height=600 frameBorder=0></iframe> 
 
 #### TODO GET THE OTHER GRAPH IN
 
