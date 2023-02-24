@@ -26,9 +26,8 @@ To work towards answering this question, we will use a dataset provided by https
 | firstmidtower | Bool | Which team gets the first midlane tower. The midlane is special in paritclar becuase it is the shortest path to the other team's nexus. Could brining it down create an advantage? |
 | firsttothreetowers | Bool | which team gets 3 towers frist. See firsttower and fristmidtower above for more details about towers |
 | csat10 | Int | How much CS (critter score, number of monsters killed) a team got by 10 minutes into a match. The original dataset had a few of these kinds of statistics |
+| csat15 | Int | How much CS (critter score, number of monsters killed) a team got by 15 minutes into a match. The original dataset had a few of these kinds of statistics |
 | kills | Int | how many times the team killed a member of the opposing team |
-
-# TODO SEAN ANY OTHER COLUMSN YOU WANT TO ADD
 
 # Data Cleaning and EDA
 
