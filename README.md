@@ -108,11 +108,12 @@ Our csat10 column contains a handful of missing values, so does that information
 
 From the test we get an obsreved tvd of 0.99. As shown above, much our simulated TVDs are far below this statistics, and we obtain a p-value of 0. At a 5% threshold, we reject the null hypothesis that the data is MCAR.
 
-How about for another column in our dataset visionscore. To test to see if the missingness of visionscore depends on league, we again run a permutation test with TVDs for the proportion of leagues with missing (and nonmissing) visionscores at 5% threshold.
+We will do the same analysis for csat10 but instead, we will investigate if csat10
+s missingness depends on if the team was on the blue side. 
 
 <iframe src="assets/missingness2.html" width=800 height=600 frameBorder=0></iframe> 
 
-Here we see our obsreved tvd is actually within the emerical distrbution of the simluated TVDs!. Our p-value follows suit at 0.729 and thus we failed to reject the null hypothesis that the column is MCAR. 
+Here the observed TVD is 0.0 and we obtain a p-value of one! This should make it seem the depenceny of the missinginess of csat10 does not depend on if the team was playing on the blue side or not.
 
 
 # Hypothesiss Testing
