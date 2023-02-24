@@ -51,7 +51,14 @@ Upon looking at a few scatter plots, this particlar scatter plot stands out. Her
 
 ## Interesting Aggregates
 
-Below we 
+One interesting groupby aggregate worth mensioning is the one below. Here we ran the following code snippet.
+
+```
+col = lol_team_data.columns.str.contains("first") | lol_team_data.columns.isin(["teamid","result"])
+lol_team_data.loc[:,col].groupby("result").mean()
+```
+
+What this code does is take all the "frist" columns for each teams then groups the result to find, on adverage, how often they occur alongside a winning team or a losing team. Below we can obsreve that consistently on average, winning teams usually are the ones to obtain some objective before the other team. Note that the highest adverage for a winning team to take some objective is for fristbaron. It would seem to point more to a relationship between winning and taking fristbaron. 
 
 <div>
 <style scoped="">
