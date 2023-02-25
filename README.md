@@ -40,7 +40,13 @@ Once that more complicated data cleaning is dealt with, we can do more standard 
 This allowed us to create the dataframe, as shown below:
 
 
-'|    | gameid                | teamid                                  | league   | url                                         | playoffs   | firstblood   | firstdragon   | firstherald   | firstbaron   | firsttower   | firstmidtower   | firstmidtower   |   csat15 |   kills |\n|---:|:----------------------|:----------------------------------------|:---------|:--------------------------------------------|:-----------|:-------------|:--------------|:--------------|:-------------|:-------------|:----------------|:----------------|---------:|--------:|\n|  0 | ESPORTSTMNT01_2690210 | oe:team:68911b3329146587617ab2973106e23 | LCK CL   | nan                                         | False      | True         | False         | True          | False        | True         | True            | True            |      487 |       9 |\n|  1 | ESPORTSTMNT01_2690210 | oe:team:d2dc3681437e2beb2bb4742477108ff | LCK CL   | nan                                         | False      | False        | True          | False         | False        | False        | False           | False           |      510 |      19 |\n|  2 | ESPORTSTMNT01_2690219 | oe:team:6dcacec00a6ba7576c5ab7f30c995cd | LCK CL   | nan                                         | False      | False        | False         | True          | False        | False        | False           | False           |      533 |       3 |\n|  3 | ESPORTSTMNT01_2690219 | oe:team:5380cdbc2ad2b8082624f48f99f6672 | LCK CL   | nan                                         | False      | True         | True          | False         | True         | True         | True            | True            |      555 |      16 |\n|  4 | 8401-8401_game_1      | oe:team:f4c4528c6981e104a11ea7548630c23 | LPL      | https://lpl.qq.com/es/stats.shtml?bmid=8401 | False      | False        | True          | True          | True         | True         | True            | True            |      nan |      13 |'
+|    | gameid                | teamid                                  | league   | url                                         | playoffs   | firstblood   | firstdragon   | firstherald   | firstbaron   | firsttower   | firstmidtower   | firstmidtower   |   csat15 |   kills |
+|---:|:----------------------|:----------------------------------------|:---------|:--------------------------------------------|:-----------|:-------------|:--------------|:--------------|:-------------|:-------------|:----------------|:----------------|---------:|--------:|
+|  0 | ESPORTSTMNT01_2690210 | oe:team:68911b3329146587617ab2973106e23 | LCK CL   | nan                                         | False      | True         | False         | True          | False        | True         | True            | True            |      487 |       9 |
+|  1 | ESPORTSTMNT01_2690210 | oe:team:d2dc3681437e2beb2bb4742477108ff | LCK CL   | nan                                         | False      | False        | True          | False         | False        | False        | False           | False           |      510 |      19 |
+|  2 | ESPORTSTMNT01_2690219 | oe:team:6dcacec00a6ba7576c5ab7f30c995cd | LCK CL   | nan                                         | False      | False        | False         | True          | False        | False        | False           | False           |      533 |       3 |
+|  3 | ESPORTSTMNT01_2690219 | oe:team:5380cdbc2ad2b8082624f48f99f6672 | LCK CL   | nan                                         | False      | True         | True          | False         | True         | True         | True            | True            |      555 |      16 |
+|  4 | 8401-8401_game_1      | oe:team:f4c4528c6981e104a11ea7548630c23 | LPL      | https://lpl.qq.com/es/stats.shtml?bmid=8401 | False      | False        | True          | True          | True         | True         | True            | True            |      nan |      13 |'
 
 
 ## Univariate Analysis
@@ -117,7 +123,7 @@ s missingness depends on if the team was on the blue side.
 
 <iframe src="assets/missingness2.html" width=800 height=600 frameBorder=0></iframe> 
 
-Here the observed TVD is 0.0 and we obtain a p-value of one! This should make it seem the dependency of the missingness of csat10 does not depend on if the team was playing on the blue side or not.
+Here the observed TVD is 0.0 and we obtain a p-value of 1! This should make it seem the dependency of the missingness of csat10 does not depend on if the team was playing on the blue side or not.
 
 
 # Hypothesiss Testing
