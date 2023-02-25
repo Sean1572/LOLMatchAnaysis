@@ -37,17 +37,25 @@ First and foremost, the dataset contains data on both overall team performance a
 
 Once that more complicated data cleaning is dealt with, we can do more standard data cleaning! The first note is that many columns needed for the analysis are integers when they can be booleans. The result of the match is 1 for a win and 0 for a loss. Why not switch that for True if a team wins and false if they lose? This was likewise done for Playoff, firstblood, firstdragon, firstherald, firsttower, firstmidtower, and firstmidtower.
 
-This allowed us to create the dataframe, as shown below:
+This allowed us to create the dataframe, as shown below spilt into 2 tables for space:
 
 
-|    | gameid                | teamid                                  | league   | url                                         | playoffs   | firstblood   | firstdragon   | firstherald   | firstbaron   | firsttower   | firstmidtower   | firstmidtower   |   csat15 |   kills |
-|---:|:----------------------|:----------------------------------------|:---------|:--------------------------------------------|:-----------|:-------------|:--------------|:--------------|:-------------|:-------------|:----------------|:----------------|---------:|--------:|
-|  0 | ESPORTSTMNT01_2690210 | oe:team:68911b3329146587617ab2973106e23 | LCK CL   | nan                                         | False      | True         | False         | True          | False        | True         | True            | True            |      487 |       9 |
-|  1 | ESPORTSTMNT01_2690210 | oe:team:d2dc3681437e2beb2bb4742477108ff | LCK CL   | nan                                         | False      | False        | True          | False         | False        | False        | False           | False           |      510 |      19 |
-|  2 | ESPORTSTMNT01_2690219 | oe:team:6dcacec00a6ba7576c5ab7f30c995cd | LCK CL   | nan                                         | False      | False        | False         | True          | False        | False        | False           | False           |      533 |       3 |
-|  3 | ESPORTSTMNT01_2690219 | oe:team:5380cdbc2ad2b8082624f48f99f6672 | LCK CL   | nan                                         | False      | True         | True          | False         | True         | True         | True            | True            |      555 |      16 |
-|  4 | 8401-8401_game_1      | oe:team:f4c4528c6981e104a11ea7548630c23 | LPL      | https://lpl.qq.com/es/stats.shtml?bmid=8401 | False      | False        | True          | True          | True         | True         | True            | True            |      nan |      13 |
+|    | gameid                | teamid                                  | league   | url                                         | playoffs |
+|---:|:----------------------|:----------------------------------------|:---------|:--------------------------------------------|:-----------|
+|  0 | ESPORTSTMNT01_2690210 | oe:team:68911b3329146587617ab2973106e23 | LCK CL   | nan                                         | False |   
+|  1 | ESPORTSTMNT01_2690210 | oe:team:d2dc3681437e2beb2bb4742477108ff | LCK CL   | nan                                         | False     
+|  2 | ESPORTSTMNT01_2690219 | oe:team:6dcacec00a6ba7576c5ab7f30c995cd | LCK CL   | nan                                         | False     
+|  3 | ESPORTSTMNT01_2690219 | oe:team:5380cdbc2ad2b8082624f48f99f6672 | LCK CL   | nan                                         | False     
+|  4 | 8401-8401_game_1      | oe:team:f4c4528c6981e104a11ea7548630c23 | LPL      | https://lpl.qq.com/es/stats.shtml?bmid=8401 | False      
 
+
+| firstblood   | firstdragon   | firstherald   | firstbaron   | firsttower   | firstmidtower   | firstmidtower   |   csat15 |   kills |
+|:-------------|:--------------|:--------------|:-------------|:-------------|:----------------|:----------------|---------:|--------:|
+| True         | False         | True          | False        | True         | True            | True            |      487 |       9 |
+| False        | True          | False         | False        | False        | False           | False           |      510 |      19 |
+| False        | False         | True          | False        | False        | False           | False           |      533 |       3 |
+| True         | True          | False         | True         | True         | True            | True            |      555 |      16 |
+| False        | True          | True          | True         | True         | True            | True            |      nan |      13 |
 
 ## Univariate Analysis
 
