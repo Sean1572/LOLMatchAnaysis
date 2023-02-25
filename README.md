@@ -46,7 +46,7 @@ This allowed us to create the dataframe, as shown below:
 |  1 | ESPORTSTMNT01_2690210 | oe:team:d2dc3681437e2beb2bb4742477108ff | LCK CL   | nan                                         | False      | False        | True          | False         | False        | False        | False           | False           |      510 |      19 |
 |  2 | ESPORTSTMNT01_2690219 | oe:team:6dcacec00a6ba7576c5ab7f30c995cd | LCK CL   | nan                                         | False      | False        | False         | True          | False        | False        | False           | False           |      533 |       3 |
 |  3 | ESPORTSTMNT01_2690219 | oe:team:5380cdbc2ad2b8082624f48f99f6672 | LCK CL   | nan                                         | False      | True         | True          | False         | True         | True         | True            | True            |      555 |      16 |
-|  4 | 8401-8401_game_1      | oe:team:f4c4528c6981e104a11ea7548630c23 | LPL      | https://lpl.qq.com/es/stats.shtml?bmid=8401 | False      | False        | True          | True          | True         | True         | True            | True            |      nan |      13 |'
+|  4 | 8401-8401_game_1      | oe:team:f4c4528c6981e104a11ea7548630c23 | LPL      | https://lpl.qq.com/es/stats.shtml?bmid=8401 | False      | False        | True          | True          | True         | True         | True            | True            |      nan |      13 |
 
 
 ## Univariate Analysis
